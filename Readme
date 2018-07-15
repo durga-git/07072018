@@ -1,0 +1,170 @@
+How to run this program
+-------------------------
+
+How to run;
+-----------
+From command line:
+-------------------
+Go to the directory where jar file is located and run the bellow commands
+1. mvn clean install
+2. java -jar 07072018-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+The client code of this program is pre configured with the sample theater layout given in the problem statement
+for simplicity reasons.
+The program can be extended for any theater with different seat layouts just by feeding the layout information
+from different clients but leaving as it is.
+
+When you run the program the very first time, it displays rows and sections in the form of a multi dimentional array structure
+followed by 'theater capacity' on a separate line.
+The program starts instructing the user to enter the (patronNameSPACEnumber) and hit enter button.
+Input validation is in place to check for the number >=1.
+
+If the seats are found, the amount of seats available after the first pattern is displayed. This is not in the requirements
+but I felt it should be there for more informative reasons to the user and added to the output section.
+
+The user is expected to continue entering the inputs till no seat is available.
+You can exit the program by letting the user to give the * (star) command anytime though this should be avoided.
+
+When the theater is full, the output of tickets is displayed in the same order as the inputs are entered.
+
+
+Note:
+Looks like the sample input is searching any 2 rows at once to find the exact of the requested seats to the each of the sections
+but that use case is not included in the program as it is not mentioned in the original seating rules of the problem statement.
+
+From IntelliJ
+--------------
+1. Import the project source files into IntelliJ
+2. Open maven projects  on the right hand side and click install
+3. This will create a target directory under which you will find the artifacts.
+4. right click on  07072018-1.0-SNAPSHOT-jar-with-dependencies.jar and click 'Run'
+
+
+Sample Console Output
+------------------------
+------------------------
+
+/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/bin/java -Dfile.encoding=UTF-8 -jar /Users/durgabasavaraju/Documents/GitHub/tutorials/07072018/target/07072018-1.0-SNAPSHOT-jar-with-dependencies.jar
+Seat Layout
+
+[6, 6]
+[3, 5, 5, 3]
+[4, 6, 6, 4]
+[2, 8, 8, 2]
+[6, 6]
+
+
+***********Theater***********
+
+ROW 0
+ROW 1
+ROW 2
+ROW 3
+ROW 4
+
+*************Row - Sections**********
+
+[Section{sectionName='SECTION 0', seatCount=6, availableSeats=6}, Section{sectionName='SECTION 1', seatCount=6, availableSeats=6}]
+[Section{sectionName='SECTION 0', seatCount=3, availableSeats=3}, Section{sectionName='SECTION 1', seatCount=5, availableSeats=5}, Section{sectionName='SECTION 2', seatCount=5, availableSeats=5}, Section{sectionName='SECTION 3', seatCount=3, availableSeats=3}]
+[Section{sectionName='SECTION 0', seatCount=4, availableSeats=4}, Section{sectionName='SECTION 1', seatCount=6, availableSeats=6}, Section{sectionName='SECTION 2', seatCount=6, availableSeats=6}, Section{sectionName='SECTION 3', seatCount=4, availableSeats=4}]
+[Section{sectionName='SECTION 0', seatCount=2, availableSeats=2}, Section{sectionName='SECTION 1', seatCount=8, availableSeats=8}, Section{sectionName='SECTION 2', seatCount=8, availableSeats=8}, Section{sectionName='SECTION 3', seatCount=2, availableSeats=2}]
+[Section{sectionName='SECTION 0', seatCount=6, availableSeats=6}, Section{sectionName='SECTION 1', seatCount=6, availableSeats=6}]
+*******************************
+
+Total Seats available :80
+Enter the patron name followed by space and number of tickets
+
+A 2
+Available seat count :78
+B 8
+Available seat count :70
+C 8
+Available seat count :62
+D 6
+Available seat count :56
+E 7
+Available seat count :56
+F 5
+Available seat count :51
+E 6
+Available seat count :45
+
+Please enter the inputs in correct format
+
+KLDSJ  SDKJ
+Please enter the inputs in correct format
+
+F 5
+Available seat count :40
+G 5
+Available seat count :35
+H 4
+Available seat count :31
+I 4
+Available seat count :27
+J 8
+Available seat count :27
+J 88
+Available seat count :27
+J 10
+Available seat count :27
+J 3
+Available seat count :24
+K 3
+Available seat count :21
+L 4
+Available seat count :17
+M 5
+Available seat count :12
+N 5
+Available seat count :7
+O 5
+Available seat count :7
+O 4
+Available seat count :7
+O 3
+Available seat count :7
+O 2
+Available seat count :5
+{ 2
+Available seat count :3
+Q 2
+Available seat count :3
+Q 1
+Available seat count :2
+R 1
+Available seat count :1
+S 1
+Available seat count :0
+T 1
+SORRY, THEATER IS HOUSEFUL, COME BACK LATER
+
+A ROW 0 SECTION 0
+B ROW 3 SECTION 1
+C ROW 3 SECTION 2
+D ROW 0 SECTION 1
+E Call to split party.
+F ROW 1 SECTION 1
+E ROW 2 SECTION 1
+F ROW 1 SECTION 2
+G ROW 2 SECTION 2
+H ROW 0 SECTION 0
+I ROW 2 SECTION 0
+J Call to split party.
+J Call to split party.
+J Call to split party.
+J ROW 1 SECTION 0
+K ROW 1 SECTION 3
+L ROW 2 SECTION 3
+M ROW 4 SECTION 0
+N ROW 4 SECTION 1
+O Call to split party.
+O Call to split party.
+O Call to split party.
+O ROW 3 SECTION 0
+{ ROW 3 SECTION 3
+Q Call to split party.
+Q ROW 2 SECTION 2
+R ROW 4 SECTION 0
+S ROW 4 SECTION 1
+
